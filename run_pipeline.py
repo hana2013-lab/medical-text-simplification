@@ -9,8 +9,8 @@ from openai import OpenAI
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-RAW_PATH = "data/raw/medication_dataset.csv"
-OUT_PATH = "data/processed/medication_dataset_processed.csv"
+RAW_PATH = "final_pipeline_ready.csv"
+OUT_PATH = "final_results_full.csv"
 
 def normalize_text(x):
     return ". ".join(str(x).splitlines()).strip()
