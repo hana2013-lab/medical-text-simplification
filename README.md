@@ -61,6 +61,7 @@ The pipeline follows these steps:
 - final_results_table.csv -> final summarized results table
 
 ## How to Run
+- Running full model pipeline requires OpenAI API key. Results are in repository
 - Open 01_build_and_run.ipynb notebook in VS code
 - Run cells in order
 
