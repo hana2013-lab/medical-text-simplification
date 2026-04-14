@@ -56,7 +56,7 @@ The pipeline follows these steps:
 - src/
   -  run_pipeline.py -> runs full simplification pipeline
   -  utils.py -> helper functions (text cleaning, numeric checks, simplification logic)
-- medication_dataset_processed.csv -> processed data used for analysis
+- final_pipeline_ready.csv -> processed data used for analysis
 - final_results_full.csv -> full output results
 - final_results_table.csv -> final summarized results table
 
