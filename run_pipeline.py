@@ -72,7 +72,6 @@ def main():
     df["Numbers_OK"] = df["Numbers_Lost"].apply(lambda x: len(x) == 0)
     df["Grade_Change"] = df["Original_Grade"] - df["Simplified_Grade"]
 
-    os.makedirs("data/processed", exist_ok=True)
     df.to_csv(OUT_PATH, index=False)
 
     print("Saved to:", OUT_PATH)
