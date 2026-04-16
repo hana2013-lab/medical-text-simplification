@@ -56,9 +56,12 @@ The pipeline follows these steps:
 - src/
   -  run_pipeline.py -> runs full simplification pipeline
   -  utils.py -> helper functions (text cleaning, numeric checks, simplification logic)
-- final_pipeline_ready.csv -> processed data used for analysis
+- final_pipeline_ready.csv -> dataset containing original and simplfied text
 - final_results_full.csv -> full output results
 - final_results_table.csv -> final summarized results table
+## Implemention Note:
+- The pipeline script (run_pipeline.py)  performs the text simplification, preprocessing, and numeric validation
+- The semantic similarity metric is (Sentence Transformer) and visualizations are computed in notebook. 
 
 ## How to Run
 - Running full model pipeline requires OpenAI API key. Results are in repository
