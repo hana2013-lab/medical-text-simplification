@@ -20,7 +20,7 @@ The pipeline follows these steps:
 
 ## Evaluation Metrics
 - Meaning preservation was evaluated using SentenceTransformer (all-mpnet-base-v2) with cosine similarity to measure semantic similarity between original and simplified text.
-- Readability was measured using: 
+- Readibility was measured using: 
   -   Flesch-Kincaid for readability/ease 
   -   Numeric token checks for safety
 - Numeric token checks implemented to detect any loss of important medical values.
@@ -40,7 +40,7 @@ The pipeline follows these steps:
   - Albuterol showed more balanced simplification and maintained high meaning preservation. 
 
 ## Limitations
-- The dataset is small (20 medication, 40 entries( dosages & warning)), which may limit generalizability to real clinical settings where medication instructions can vary in structure and complexity. 
+- The dataset is small (20 medication, 40 entries( dosages & warning sections)), which may limit generalizability to real clinical settings where medication instructions can vary in structure and complexity. 
 - Results can vary depending on the structure of the original medical text.
 - Readibility metrics may exaggerate improvements due to sensitivity to sentence length
 - The model does not strictly control target reading level, which can lead to oversimplification.
@@ -53,20 +53,20 @@ The pipeline follows these steps:
 
 ## Project Structure
 - 01_build_and_run.ipynb -> main notebook for running pipeline
-- src/
   -  run_pipeline.py -> runs full simplification pipeline
   -  utils.py -> helper functions (text cleaning, numeric checks, simplification logic)
-- final_pipeline_ready.csv -> dataset containing original and simplfied text
+- final_pipeline_ready.csv -> dataset containing original and simplified text
 - final_results_full.csv -> full output results
 - final_results_table.csv -> final summarized results table
-## Implemention Note:
+## Implementation Note:
 - The pipeline script (run_pipeline.py)  performs the text simplification, preprocessing, and numeric validation
-- The semantic similarity metric is (Sentence Transformer) and visualizations are computed in notebook. 
+- The semantic similarity metric (Sentence Transformer) and visualizations are computed in notebook. 
 
 ## How to Run
 - Running full model pipeline requires OpenAI API key. Results are in repository
-- Open 01_build_and_run.ipynb notebook in VS code
+- Open 01_build_and_run.ipynb notebook in VS code or Jupyter 
 - Run cells in order
+- Precomputed results are included in repository
 
 ## Presentation
 (https://youtu.be/qgos75LCC7A)
